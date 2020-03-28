@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "===== Install .Net Core ====="
-wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+wget -q https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 rm -fr packages-microsoft-prod.deb
 
