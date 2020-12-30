@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_COMPOSE_VERSION=1.25.4
+DOCKER_COMPOSE_VERSION=1.27.4
 
 sudo apt-get update -y
 sudo apt-get install -y apt-transport-https \
