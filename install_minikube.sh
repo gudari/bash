@@ -1,13 +1,13 @@
 #!/bin/bash
 
-MINIKUBE_VERSION=1.16.0
-HELM_VERSION=3.4.2
+MINIKUBE_VERSION=1.22.0
+HELM_VERSION=3.6.3
 
 sudo apt-get update && sudo apt-get install -y apt-transport-https
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo rm -fr /etc/apt/sources.list.d/kubernetes.list
 sudo touch /etc/apt/sources.list.d/kubernetes.list 
-echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+echo "deb http://apt.kubernetes.io/ kubernetes-$(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
 sudo apt-get install -y kubectl
 
